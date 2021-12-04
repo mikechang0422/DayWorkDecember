@@ -229,4 +229,11 @@ section p {
 section p::first-letter {
   text-transform: capitalize;
 }
+
+@media (max-width: 540px) {
+  .navigation_menu.active + section {
+    overflow: hidden;
+    height: 70vh;
+  }
+}
 /*# sourceMappingURL=Dec4.css.map */

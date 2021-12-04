@@ -207,3 +207,14 @@ section {
         }
     }
 }
+
+@media (max-width: 540px) {
+    .navigation_menu {
+        &.active {
+            + section {
+                overflow: hidden;
+                height: 70vh;
+            }
+        }
+    }
+}
