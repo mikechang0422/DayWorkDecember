@@ -1,0 +1,232 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
+@import url("../font/Butler_Webfont/stylesheet.css");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Ubuntu, Lato, Butler, sans-serif;
+  color: #2c3a47;
+  background: #238d97;
+}
+
+.header {
+  margin-bottom: 3rem;
+  width: 100%;
+  background-color: #f1f1f1aa;
+  -webkit-box-shadow: 0 5px 10px #fffaffaa;
+          box-shadow: 0 5px 10px #fffaffaa;
+}
+
+.header .inner_width {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 1.5rem;
+  margin: auto;
+  max-width: 80%;
+}
+
+.header .inner_width h2 {
+  font-size: 3rem;
+  color: transparent;
+  background: -webkit-gradient(linear, left top, left bottom, from(#1bdce2), to(#2c3a47));
+  background: linear-gradient(to bottom, #1bdce2, #2c3a47);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+}
+
+.header .inner_width .menu_icon {
+  z-index: 2;
+  width: 3.5rem;
+  height: 3.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #1bdce2;
+  background: #2c3a47aa;
+  border-radius: 1rem;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+  line-height: 3.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.header .inner_width .menu_icon.active {
+  color: #2c3a47;
+  background-color: #1bdce2;
+  -webkit-box-shadow: 3px 3px 5px #2c3a47aa, -3px -3px 5px #2c3a47aa, 3px -3px 5px #2c3a47aa, -3px 3px 5px #2c3a47aa;
+          box-shadow: 3px 3px 5px #2c3a47aa, -3px -3px 5px #2c3a47aa, 3px -3px 5px #2c3a47aa, -3px 3px 5px #2c3a47aa;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.header .inner_width .menu_icon:hover {
+  opacity: 0.8;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.navigation_menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(60deg, #2c3a47, #1bdce2);
+  -webkit-transition: 0.6s linear;
+  transition: 0.6s linear;
+}
+
+.navigation_menu .nav {
+  display: -ms-grid;
+  display: grid;
+}
+
+.navigation_menu .nav li {
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.navigation_menu .nav li a {
+  position: relative;
+  display: inline-block;
+  font-size: 2rem;
+  color: #fffaff;
+  font-weight: 700;
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.navigation_menu .nav li a::before {
+  position: absolute;
+  right: 0;
+  bottom: 0.4rem;
+  z-index: -1;
+  width: 0;
+  height: 0.3rem;
+  background-color: #1bdce2aa;
+  border-radius: 1em;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+  content: "";
+  -webkit-animation: bganimate 4s linear infinite;
+          animation: bganimate 4s linear infinite;
+}
+
+@-webkit-keyframes bganimate {
+  50% {
+    -webkit-transform: translateY(-1.6rem);
+            transform: translateY(-1.6rem);
+  }
+}
+
+@keyframes bganimate {
+  50% {
+    -webkit-transform: translateY(-1.6rem);
+            transform: translateY(-1.6rem);
+  }
+}
+
+.navigation_menu .nav li:hover a::before {
+  left: 0;
+  width: 100%;
+}
+
+.navigation_menu.active {
+  right: 0;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.navigation_menu.active .nav li a {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.navigation_menu.active .nav li:nth-child(1) a {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.navigation_menu.active .nav li:nth-child(2) a {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+.navigation_menu.active .nav li:nth-child(3) a {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+.navigation_menu.active .nav li:nth-child(4) a {
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+}
+
+.navigation_menu.active .nav li:nth-child(5) a {
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
+.navigation_menu.active + section {
+  overflow: hidden;
+  height: 85vh;
+}
+
+section {
+  margin-bottom: 3rem;
+  -webkit-transition: 0.6s linear;
+  transition: 0.6s linear;
+}
+
+section p {
+  margin: auto;
+  margin-bottom: 1rem;
+  max-width: 70%;
+  font-size: 1rem;
+  text-align: justify;
+  text-indent: 2rem;
+  color: #333;
+  line-height: 1.5;
+  letter-spacing: 0.025rem;
+}
+
+section p::first-letter {
+  text-transform: capitalize;
+}
+/*# sourceMappingURL=Dec4.css.map */
