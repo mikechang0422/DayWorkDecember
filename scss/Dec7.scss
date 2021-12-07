@@ -1,0 +1,158 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
+@import url("../font/Butler_Webfont/stylesheet.css");
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Lato, Butler, sans-serif;
+    color: #fffaff;
+    background-color: #222327;
+}
+
+.nav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 10px;
+
+    ul {
+        display: flex;
+        width: 350px;
+    }
+
+    li {
+        position: relative;
+        width: 70px;
+        height: 60px;
+        list-style: none;
+
+        a {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+            font-weight: 400;
+            text-transform: capitalize;
+
+            .icon {
+                position: relative;
+                display: block;
+                font-size: 1.5rem;
+                color: #222327;
+                transition: 0.3s linear;
+                line-height: 65px;
+            }
+
+            .txt {
+                position: absolute;
+                padding: 2px 7px;
+                font-size: 0.75rem;
+                color: #fff;
+                background-color: #2196f3;
+                border-radius: 12px;
+                opacity: 0;
+                transition: 0.3s linear;
+                font-weight: 400;
+                letter-spacing: 0.05rem;
+                transform: translateY(15px);
+            }
+        }
+
+        &.active {
+            a {
+                .icon {
+                    transform: translateY(-32px);
+                    color: #2196f3;
+                }
+
+                .txt {
+                    transform: translateY(-4px);
+                    opacity: 1;
+                }
+            }
+        }
+
+        &:nth-child(1).active ~ .indicator {
+            transform: translateX(calc(70px * 0));
+        }
+
+        &:nth-child(2).active ~ .indicator {
+            transform: translateX(calc(70px * 1));
+        }
+
+        &:nth-child(3).active ~ .indicator {
+            transform: translateX(calc(70px * 2));
+        }
+
+        &:nth-child(4).active ~ .indicator {
+            transform: translateX(calc(70px * 3));
+        }
+
+        &:nth-child(5).active ~ .indicator {
+            transform: translateX(calc(70px * 4));
+        }
+    }
+
+    .indicator {
+        position: absolute;
+        top: -35px;
+        z-index: -1;
+        width: 70px;
+        height: 70px;
+        background-color: #fffaff;
+        border-radius: 50%;
+        opacity: 0;
+        transition: 0.3s linear;
+
+        &::before,
+        &::after {
+            position: absolute;
+            top: 5px;
+            width: 30px;
+            height: 30px;
+            background-color: transparent;
+            border-radius: 50%;
+            opacity: 0;
+            transition: 0.3s linear;
+            content: "";
+        }
+
+        &::before {
+            left: -28px;
+            box-shadow: 15px 18px #fffaff;
+        }
+
+        &::after {
+            right: -28px;
+            box-shadow: -15px 18px #fffaff;
+        }
+
+        &.active {
+            opacity: 1;
+
+            &::before,
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+}

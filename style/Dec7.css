@@ -1,0 +1,190 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
+@import url("../font/Butler_Webfont/stylesheet.css");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  font-family: Lato, Butler, sans-serif;
+  color: #fffaff;
+  background-color: #222327;
+}
+
+.nav {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 400px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 350px;
+}
+
+.nav li {
+  position: relative;
+  width: 70px;
+  height: 60px;
+  list-style: none;
+}
+
+.nav li a {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  text-align: center;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.nav li a .icon {
+  position: relative;
+  display: block;
+  font-size: 1.5rem;
+  color: #222327;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+  line-height: 65px;
+}
+
+.nav li a .txt {
+  position: absolute;
+  padding: 2px 7px;
+  font-size: 0.75rem;
+  color: #fff;
+  background-color: #2196f3;
+  border-radius: 12px;
+  opacity: 0;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+  -webkit-transform: translateY(15px);
+          transform: translateY(15px);
+}
+
+.nav li.active a .icon {
+  -webkit-transform: translateY(-32px);
+          transform: translateY(-32px);
+  color: #2196f3;
+}
+
+.nav li.active a .txt {
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+  opacity: 1;
+}
+
+.nav li:nth-child(1).active ~ .indicator {
+  -webkit-transform: translateX(calc(70px * 0));
+          transform: translateX(calc(70px * 0));
+}
+
+.nav li:nth-child(2).active ~ .indicator {
+  -webkit-transform: translateX(calc(70px * 1));
+          transform: translateX(calc(70px * 1));
+}
+
+.nav li:nth-child(3).active ~ .indicator {
+  -webkit-transform: translateX(calc(70px * 2));
+          transform: translateX(calc(70px * 2));
+}
+
+.nav li:nth-child(4).active ~ .indicator {
+  -webkit-transform: translateX(calc(70px * 3));
+          transform: translateX(calc(70px * 3));
+}
+
+.nav li:nth-child(5).active ~ .indicator {
+  -webkit-transform: translateX(calc(70px * 4));
+          transform: translateX(calc(70px * 4));
+}
+
+.nav .indicator {
+  position: absolute;
+  top: -35px;
+  z-index: -1;
+  width: 70px;
+  height: 70px;
+  background-color: #fffaff;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.nav .indicator::before, .nav .indicator::after {
+  position: absolute;
+  top: 5px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+  content: "";
+}
+
+.nav .indicator::before {
+  left: -28px;
+  -webkit-box-shadow: 15px 18px #fffaff;
+          box-shadow: 15px 18px #fffaff;
+}
+
+.nav .indicator::after {
+  right: -28px;
+  -webkit-box-shadow: -15px 18px #fffaff;
+          box-shadow: -15px 18px #fffaff;
+}
+
+.nav .indicator.active {
+  opacity: 1;
+}
+
+.nav .indicator.active::before, .nav .indicator.active::after {
+  opacity: 1;
+}
+/*# sourceMappingURL=Dec7.css.map */
