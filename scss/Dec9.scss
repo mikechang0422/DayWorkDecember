@@ -1,0 +1,150 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
+@import url("../font/Butler_Webfont/stylesheet.css");
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    font-size: 20px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Lato, Butler, sans-serif;
+    color: #fffaff;
+    background-color: #222327;
+}
+
+.nav {
+    position: relative;
+    width: 25rem;
+    height: 5rem;
+
+    .list {
+        display: flex;
+
+        .item {
+            position: relative;
+            z-index: 1;
+            width: 5rem;
+            height: 5rem;
+            list-style: none;
+
+            a {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                color: #7fffd4;
+                flex-direction: column;
+
+                .icon {
+                    position: relative;
+                    font-size: 3rem;
+                    transition: 0.3s linear;
+                    line-height: 5rem;
+                }
+
+                .txt {
+                    position: absolute;
+                    bottom: 1rem;
+                    font-size: 1rem;
+                    color: #7fffd4;
+                    transition: 0.3s linear;
+                    font-weight: 400;
+                    transform: scale(0);
+                    text-transform: uppercase;
+                }
+            }
+
+            &.active {
+                a {
+                    .icon {
+                        font-size: 2rem;
+                        transform: translateY(-0.5rem);
+                    }
+
+                    .txt {
+                        transform: scale(1);
+                    }
+                }
+
+                & ~ .indicator {
+                    background-color: #5f9ea0cc;
+                    box-shadow: 0 15px 25px #7fffd4cc;
+                }
+
+                &:nth-child(1) {
+                    filter: hue-rotate(0deg);
+
+                    ~ .indicator {
+                        filter: hue-rotate(0deg);
+                        transform: translateX(calc(5rem * 0));
+                    }
+                }
+
+                &:nth-child(2) {
+                    filter: hue-rotate(120deg);
+
+                    ~ .indicator {
+                        filter: hue-rotate(120deg);
+                        transform: translateX(calc(5rem * 1));
+                    }
+                }
+
+                &:nth-child(3) {
+                    filter: hue-rotate(180deg);
+
+                    ~ .indicator {
+                        filter: hue-rotate(180deg);
+                        transform: translateX(calc(5rem * 2));
+                    }
+                }
+
+                &:nth-child(4) {
+                    filter: hue-rotate(240deg);
+
+                    ~ .indicator {
+                        filter: hue-rotate(240deg);
+                        transform: translateX(calc(5rem * 3));
+                    }
+                }
+
+                &:nth-child(5) {
+                    filter: hue-rotate(300deg);
+
+                    ~ .indicator {
+                        filter: hue-rotate(300deg);
+                        transform: translateX(calc(5rem * 4));
+                    }
+                }
+            }
+        }
+
+        .indicator {
+            position: absolute;
+            left: 0;
+            width: 5rem;
+            height: 5rem;
+            border-radius: 10px;
+            transition: 0.3s linear;
+        }
+    }
+}
+
+@media (max-width: 540px) {
+    html {
+        font-size: 14px;
+    }
+}
