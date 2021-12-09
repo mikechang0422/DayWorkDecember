@@ -80,6 +80,13 @@ body {
   -webkit-transition: 0.3s linear;
   transition: 0.3s linear;
   font-weight: 700;
+  -webkit-transition-delay: 0.25s;
+          transition-delay: 0.25s;
+}
+
+.conataincer .serviceBox .icon ion-icon {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
 }
 
 .conataincer .serviceBox .content {
@@ -88,6 +95,12 @@ body {
   padding: 1rem;
   margin-top: 5rem;
   text-align: center;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
 }
 
 .conataincer .serviceBox .content h3 {
@@ -120,6 +133,10 @@ body {
   color: #fff8dc;
 }
 
+.conataincer .serviceBox .content a:hover {
+  text-decoration: underline;
+}
+
 .conataincer .serviceBox:hover .icon {
   top: 30px;
   left: calc(50% - 2rem);
@@ -127,6 +144,20 @@ body {
   height: 4rem;
   font-size: 2rem;
   border-radius: 50%;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.conataincer .serviceBox:hover .icon ion-icon {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.conataincer .serviceBox:hover .content {
+  -webkit-transition-delay: 0.25s;
+          transition-delay: 0.25s;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .conataincer .serviceBox:nth-child(2) .icon {
