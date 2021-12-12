@@ -68,8 +68,8 @@ body {
     ul li {
         display: inline-block;
         margin: 0 1rem;
-        height: 64px;
-        line-height: 64px;
+        height: 4rem;
+        line-height: 4rem;
 
         a {
             font-size: 1.25rem;
@@ -220,6 +220,51 @@ body {
                     padding: 1rem;
                     background-color: #272727aa;
                     border-radius: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 540px) {
+    .header {
+        ul li {
+            height: 1rem;
+            line-height: 1rem;
+
+            a {
+                font-size: 0.8rem;
+            }
+        }
+
+        .megamenu {
+            li {
+                padding: 0.6rem 2rem;
+
+                a {
+                    span {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .content {
+        .item:hover {
+            width: 500%;
+
+            .txt {
+                padding: 1rem 1rem 3rem;
+
+                h3 {
+                    font-size: 1.1rem;
+                }
+
+                a {
+                    span {
+                        font-size: 1rem;
+                    }
                 }
             }
         }
