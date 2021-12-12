@@ -79,8 +79,8 @@ body {
 .header ul li {
   display: inline-block;
   margin: 0 1rem;
-  height: 64px;
-  line-height: 64px;
+  height: 4rem;
+  line-height: 4rem;
 }
 
 .header ul li a {
@@ -246,5 +246,33 @@ body {
   padding: 1rem;
   background-color: #272727aa;
   border-radius: 1rem;
+}
+
+@media (max-width: 540px) {
+  .header ul li {
+    height: 1rem;
+    line-height: 1rem;
+  }
+  .header ul li a {
+    font-size: 0.8rem;
+  }
+  .header .megamenu li {
+    padding: 0.6rem 2rem;
+  }
+  .header .megamenu li a span {
+    font-size: 0.8rem;
+  }
+  .content .item:hover {
+    width: 500%;
+  }
+  .content .item:hover .txt {
+    padding: 1rem 1rem 3rem;
+  }
+  .content .item:hover .txt h3 {
+    font-size: 1.1rem;
+  }
+  .content .item:hover .txt a span {
+    font-size: 1rem;
+  }
 }
 /*# sourceMappingURL=Dec12.css.map */
