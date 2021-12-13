@@ -1,0 +1,173 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
+@import url("../font/Butler_Webfont/stylesheet.css");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  font-size: 20px;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  font-family: Lato, Butler, sans-serif;
+  color: #ffe4c4;
+  background-color: #171322;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  padding: 1rem;
+  width: 20rem;
+  height: 7rem;
+  background-color: cadetblue;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 3rem 3rem #0003;
+          box-shadow: 0 3rem 3rem #0003;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.card .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card .content .imgBx {
+  position: relative;
+  overflow: hidden;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+
+.card .content .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card .content h2 {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  color: #ffe4c4;
+  text-transform: capitalize;
+}
+
+.card .content h2 span {
+  line-height: 1.2;
+  color: #ffe4c488;
+}
+
+.card .nav {
+  position: relative;
+  top: 1rem;
+  border-top: 1px solid #0003;
+}
+
+.card .nav li {
+  margin: 1rem 0;
+}
+
+.card .nav li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.1rem;
+  color: #ffe4c4;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+  text-transform: capitalize;
+}
+
+.card .nav li a ion-icon {
+  margin-right: 1rem;
+  font-size: 1.6rem;
+}
+
+.card .nav li a:hover {
+  color: #faebd788;
+  letter-spacing: 0.2rem;
+}
+
+.card .toggle {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  background-color: #17132266;
+  cursor: pointer;
+  border-top-left-radius: 1rem;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.card .toggle ion-icon {
+  font-size: 1.2rem;
+  color: #ffe4c4;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.card .toggle:hover {
+  background-color: #17132299;
+}
+
+.card .toggle:hover ion-icon {
+  color: #fff4f4;
+}
+
+.card.active {
+  height: 25rem;
+}
+
+.card.active .toggle ion-icon {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+@media (max-width: 540px) {
+  html {
+    font-size: 16px;
+  }
+}
+/*# sourceMappingURL=Dec13.css.map */
