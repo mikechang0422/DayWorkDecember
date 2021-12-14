@@ -1,0 +1,88 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
+@import url("../font/Butler_Webfont/stylesheet.css");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  font-size: 20px;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  height: 100vh;
+  font-family: Lato, Butler, sans-serif;
+  background: url("../images/Dec14/pexels-cliford-mervil-2469122.jpg") center no-repeat;
+  background-size: cover;
+}
+
+i {
+  position: absolute;
+  height: 200px;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#fac));
+  background: linear-gradient(transparent, #fac);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  -webkit-animation: animate 10s linear infinite;
+          animation: animate 10s linear infinite;
+}
+
+i:nth-child(3n+1) {
+  -webkit-filter: hue-rotate(90deg);
+          filter: hue-rotate(90deg);
+}
+
+i:nth-child(3n+2) {
+  -webkit-filter: hue-rotate(180deg);
+          filter: hue-rotate(180deg);
+}
+
+i:nth-child(3n+3) {
+  -webkit-filter: hue-rotate(270deg);
+          filter: hue-rotate(270deg);
+}
+
+@-webkit-keyframes animate {
+  from {
+    -webkit-transform: translateY(-200px);
+            transform: translateY(-200px);
+  }
+  to {
+    -webkit-transform: translateY(calc(90vh - 200px));
+            transform: translateY(calc(90vh - 200px));
+  }
+}
+
+@keyframes animate {
+  from {
+    -webkit-transform: translateY(-200px);
+            transform: translateY(-200px);
+  }
+  to {
+    -webkit-transform: translateY(calc(90vh - 200px));
+            transform: translateY(calc(90vh - 200px));
+  }
+}
+
+@media (max-width: 540px) {
+  html {
+    font-size: 16px;
+  }
+}
+/*# sourceMappingURL=Dec14.css.map */
