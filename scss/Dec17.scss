@@ -1,0 +1,138 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
+@import url("../font/Butler_Webfont/stylesheet.css");
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --bgcolormenu: #1d1d27;
+    --duration: 0.7s;
+}
+
+html *,
+html *::before,
+html *::after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 0;
+    height: 100vh;
+    background-color: #ffb457;
+    transition: background-color var(--duration);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2.85em;
+    margin: 0;
+    width: 32.05em;
+    font-size: 1.5em;
+    background-color: var(--bgcolormenu);
+}
+
+.menu__item {
+    position: relative;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.55em 0 0.85em;
+    border-radius: 50%;
+    transition: transform var(--timeOut, var(--duration));
+    all: unset;
+    flex-grow: 1;
+    cursor: pointer;
+    will-change: transform;
+
+    .icon {
+        width: 4.2em;
+        height: 4.2em;
+        stroke: white;
+        fill: transparent;
+        stroke-width: 1pt;
+        stroke-miterlimit: 10;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-dasharray: 400;
+    }
+
+    &::before {
+        position: absolute;
+        z-index: -1;
+        width: 4.2em;
+        height: 4.2em;
+        border-radius: 50%;
+        transition: background-color var(--duration), transform var(--duration);
+        content: "";
+        transform: scale(0);
+    }
+
+    &.active {
+        transform: translate3d(0, -0.8em, 0);
+
+        .icon {
+            animation: strok 1.5s reverse;
+        }
+
+        &::before {
+            transform: scale(1);
+            background-color: var(--bgColorItem);
+        }
+    }
+}
+
+@keyframes strok {
+    to {
+        stroke-dashoffset: 400;
+    }
+}
+
+.menu__border {
+    position: absolute;
+    bottom: 99%;
+    left: -10px;
+    z-index: -1;
+    width: 10.9em;
+    height: 2.4em;
+    background-color: var(--bgcolormenu);
+    transition: transform var(--timeOut, var(--duration));
+    clip-path: url(#menu);
+    will-change: transform;
+}
+
+.svg-container {
+    width: 0;
+    height: 0;
+}
+
+@media screen and (max-width: 50em) {
+    .menu {
+        font-size: 0.8em;
+    }
+
+    .menu__border {
+        left: -6px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .menu__border {
+        left: -1px;
+    }
+}
