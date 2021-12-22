@@ -1,0 +1,164 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
+@import url("../font/Butler_Webfont/stylesheet.css");
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    font-size: 20px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    font-family: Butler, Lato, sans-serif;
+}
+
+.sec {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: #1111;
+
+    h2 {
+        position: absolute;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        font-size: 15vw;
+        text-align: center;
+        color: #fff;
+        background: #000;
+        user-select: none;
+        font-weight: 900;
+        text-transform: uppercase;
+        mix-blend-mode: multiply;
+    }
+
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .dot {
+        position: absolute;
+        z-index: 10;
+        width: 2rem;
+        height: 2rem;
+        background-color: #fff8;
+        border-radius: 50%;
+        transition: box-shadow 0.3s linear;
+        transform: translate(-50%, -50%);
+        cursor: default;
+
+        &.active {
+            background-color: #3338;
+            border: 2px solid;
+
+            &::before {
+                content: "Dark Mode";
+                color: #333;
+            }
+
+            &:active {
+                border: 2px solid;
+                box-shadow: 0 0 0 200vh #fff8;
+            }
+        }
+
+        &:active {
+            border: 2px solid;
+            box-shadow: 0 0 0 200vh #333c;
+        }
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 110%;
+            font-size: 1.5rem;
+            white-space: nowrap;
+            color: #fff;
+            content: "Light Mode";
+            transform: translateY(-50%);
+            font-weight: 400;
+        }
+    }
+
+    &.active {
+        background: url("../images/Dec22/pexels-burak-kebapci-870827.jpg") center no-repeat;
+        background-size: cover;
+
+        h2 {
+            color: #000a;
+            background-color: #fff;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+
+    .sec {
+        background: url("../images/Dec22/pexels-tomas-ryant-2881804.jpg") center no-repeat;
+        background-size: cover;
+
+        video {
+            display: none;
+            visibility: hidden;
+        }
+
+        h2 {
+            color: #000a;
+            background-color: #fff;
+        }
+
+        &.active {
+            background: url("../images/Dec22/pexels-burak-kebapci-870827.jpg") center no-repeat;
+            background-size: cover;
+
+            h2 {
+                color: #000a;
+                background-color: #fff;
+            }
+        }
+    }
+}
+
+@media (max-width: 540px) {
+    html {
+        font-size: 14px;
+    }
+
+    .sec {
+        background: url("../images/Dec22/pexels-karolina-grabowska-5469707.jpg") center no-repeat;
+
+        &.active {
+            background: url("../images/Dec22/pexels-lucas-pezeta-1854219.jpg") center no-repeat;
+            background-size: cover;
+        }
+    }
+}
