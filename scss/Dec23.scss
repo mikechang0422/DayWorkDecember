@@ -1,0 +1,100 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
+@import url("../font/Butler_Webfont/stylesheet.css");
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    font-size: 20px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    font-family: Lato, Butler, sans-serif;
+    background: linear-gradient(#4d8, #dd8);
+}
+
+.center {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .letter {
+        font-size: 10vw;
+        color: #fffaff;
+        transition: 0.3s linear;
+        font-weight: 700;
+        line-height: 1.5;
+        letter-spacing: 0.2rem;
+        text-transform: capitalize;
+        transform: perspective(01000px) rotateX(35deg);
+
+        span {
+            display: inline-block;
+            padding: 0 0.5rem;
+            filter: blur(0.5px);
+            box-shadow: 10px 50px 20px #0001;
+            text-shadow: 0 5px 2px #0001;
+            transition: 0.3s linear;
+
+            &:nth-child(odd) {
+                color: #fffc;
+                background-color: #0008;
+                transform: skewY(-15deg);
+            }
+
+            &:nth-child(even) {
+                color: #0008;
+                background-color: #fffc;
+                transform: skewY(15deg);
+            }
+        }
+
+        &:hover {
+            border-radius: 1rem;
+            transform: rotateX(0);
+
+            span {
+                background-color: #dd8c;
+                transform: skewY(0deg);
+                box-shadow: 0 2px 2px #0001;
+            }
+
+            &:nth-child(even) {
+                color: #0008;
+                background-color: #fffc;
+                transform: skewY(15deg);
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 540px) {
+    html {
+        font-size: 14px;
+    }
+
+    .center {
+        .letter {
+            font-size: 5vw;
+        }
+    }
+}
