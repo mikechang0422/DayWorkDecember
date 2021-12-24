@@ -1,0 +1,171 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
+@import url("../font/Butler_Webfont/stylesheet.css");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  font-size: 20px;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  font-family: Lato, Butler, sans-serif;
+  background: -webkit-gradient(linear, left top, left bottom, from(#44b9dd), to(#dd8));
+  background: linear-gradient(#44b9dd, #dd8);
+}
+
+.container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 1000px;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container .card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 12.5rem;
+  height: 15rem;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.container .card .content {
+  z-index: 2;
+  padding: 1rem;
+  margin: 1rem;
+  text-align: center;
+  color: antiquewhite;
+  background-color: #0005;
+  border-radius: 1rem;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.container .card .content h2 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.container .card .content p {
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+}
+
+.container .card .content a {
+  display: inline-block;
+  padding: 0.4rem 0.6rem;
+  margin-top: 1rem;
+  text-decoration: none;
+  color: antiquewhite;
+  background: #262626;
+  border-radius: 5px;
+}
+
+.container .card::before {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+  content: "";
+}
+
+.container .card:nth-child(1)::before {
+  background: url("../images/Dec24/pexels-chevanon-photography-312418.jpg") center no-repeat;
+}
+
+.container .card:nth-child(2)::before {
+  background: url("../images/Dec24/pexels-eyad-tariq-3879495.jpg") center no-repeat;
+}
+
+.container .card:nth-child(3)::before {
+  background: url("../images/Dec24/pexels-lilartsy-3216564.jpg") center no-repeat;
+}
+
+.container .card:nth-child(4)::before {
+  background: url("../images/Dec24/pexels-quang-anh-ha-nguyen-885021.jpg") center no-repeat;
+}
+
+.container:hover .card {
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+}
+
+.container:hover .card:hover {
+  z-index: 1;
+  -webkit-filter: blur(0);
+          filter: blur(0);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.container:hover .card:hover .content a {
+  color: chocolate;
+  background: #faebd733;
+}
+
+.container:hover .card:hover::before {
+  background-size: cover;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  -webkit-transform: scaleY(1.15);
+          transform: scaleY(1.15);
+}
+
+.container:hover .card:hover::after {
+  -webkit-transform: scaleY(1.15);
+          transform: scaleY(1.15);
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 540px) {
+  html {
+    font-size: 14px;
+  }
+}
+/*# sourceMappingURL=Dec24.css.map */
