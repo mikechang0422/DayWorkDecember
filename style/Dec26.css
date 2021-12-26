@@ -1,0 +1,118 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
+@import url("../font/Butler_Webfont/stylesheet.css");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  font-size: 20px;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  font-family: Lato, Butler, sans-serif;
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 100vh;
+  background: url(../images/Dec26/bg.jpg) center no-repeat;
+  background-size: cover;
+}
+
+.container .title {
+  font-size: 30vw;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 0 #0002, 1px 1px 0 #aaa, 2px 2px 0 #aaa, 3px 3px 0 #aaa, 4px 4px 0 #aaa, 5px 5px 0 #aaa, 6px 6px 0 #aaa, 7px 7px 0 #aaa, 8px 8px 0 #aaa, 9px 9px 0 #aaa, 10px 10px 0 #aaa, 11px 11px 0 #aaa, 12px 12px 0 #aaa, 13px 13px 0 #aaa, 14px 14px 0 #aaa, 15px 15px 0 #0009, 20px 20px 10px #0009;
+  text-transform: capitalize;
+}
+
+.container .content {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  z-index: 1;
+  padding: 1rem;
+  text-align: center;
+  background-color: #0003;
+  border-radius: 1rem;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.container .content p {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: #fff;
+  text-shadow: 0 5px 10px #000;
+  text-transform: capitalize;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+}
+
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  margin: 0 auto;
+  width: 50%;
+  font-size: 1rem;
+  color: #111;
+  background: #fff;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 5px 10px #0009;
+          box-shadow: 0 5px 10px #0009;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+}
+
+.btn:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  opacity: 0.8;
+}
+
+.tree {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 540px) {
+  html {
+    font-size: 14px;
+  }
+}
+/*# sourceMappingURL=Dec26.css.map */
