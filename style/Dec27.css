@@ -1,0 +1,157 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
+@import url("../font/Butler_Webfont/stylesheet.css");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  font-size: 20px;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Franklin Gothic Medium", Lato, Butler, "Arial Narrow", Arial, sans-serif;
+  background: url("../images/Dec27/pexels-anete-lusina-5240579.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.container {
+  overflow: hidden;
+  padding: 1rem;
+  width: 20rem;
+  background-color: #0008;
+  border-radius: 1rem;
+  -webkit-box-shadow: -10px -10px 15px #fff1, 10px 10px 15px #8882;
+          box-shadow: -10px -10px 15px #fff1, 10px 10px 15px #8882;
+}
+
+.container .input_box {
+  padding: 0.75rem;
+  width: 85%;
+  font-size: 1rem;
+  color: antiquewhite;
+  background-color: #0003;
+  border: 0;
+  border-radius: 1rem;
+  outline: 0;
+  -webkit-box-shadow: -10px -10px 15px #fff1, 10px 10px 15px #8882;
+          box-shadow: -10px -10px 15px #fff1, 10px 10px 15px #8882;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.container .input_box::-webkit-input-placeholder {
+  color: antiquewhite;
+  font-weight: 400;
+}
+
+.container .input_box:-ms-input-placeholder {
+  color: antiquewhite;
+  font-weight: 400;
+}
+
+.container .input_box::-ms-input-placeholder {
+  color: antiquewhite;
+  font-weight: 400;
+}
+
+.container .input_box::placeholder {
+  color: antiquewhite;
+  font-weight: 400;
+}
+
+.container .btn {
+  padding: 5px 8px;
+  font-size: 1rem;
+  color: antiquewhite;
+  background-color: #0003;
+  border-radius: 0.25rem;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+ul li {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  width: 100%;
+  color: antiquewhite;
+  background-color: #0003;
+  border-radius: 1rem;
+  -webkit-box-shadow: -10px -10px 15px #fff1, 10px 10px 15px #8882;
+          box-shadow: -10px -10px 15px #fff1, 10px 10px 15px #8882;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+ul li.bg-color {
+  text-decoration: line-through;
+}
+
+ul li span i {
+  padding: 0.25rem;
+  background-color: #0003;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+ul li span i + i {
+  margin-left: 1rem;
+}
+
+ul li span i:hover {
+  opacity: 0.8;
+}
+
+ul li span .fa-check {
+  color: green;
+}
+
+ul li span .fa-trash-alt {
+  color: chocolate;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 540px) {
+  html {
+    font-size: 14px;
+  }
+  body {
+    background: url("../images/Dec27/pexels-alex-bargain-3448835.jpg") center no-repeat;
+  }
+  .container {
+    background-color: #fff8;
+  }
+}
+/*# sourceMappingURL=Dec27.css.map */
