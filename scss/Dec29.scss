@@ -1,0 +1,152 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
+@import url("../font/Butler_Webfont/stylesheet.css");
+
+:root {
+    --pryColor: #faebd7;
+    --secColor: #fd8421;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    font-family: Lato, Butler, "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    background: url("../images/Dec29/pexels-christian-domingues-731022.jpg") center no-repeat;
+    background-size: cover;
+}
+
+.calendar {
+    padding: 2rem 4rem;
+
+    .calendar-header {
+        border: none;
+
+        table {
+            th.prev,
+            th.next {
+                span {
+                    font-size: 4rem;
+                }
+            }
+
+            th {
+                &:hover {
+                    background: transparent;
+                }
+            }
+        }
+
+        .year-title {
+            font-size: 8rem;
+            color: #111;
+            text-shadow: 1px 1px (var(--secColor)), -1px 1px (var(--secColor)), 1px -1px (var(--secColor)), -1px -1px (var(--secColor));
+        }
+
+        .year-neighbor {
+            font-size: 5rem;
+        }
+
+        .year-neighbor2 {
+            font-size: 2rem;
+        }
+    }
+
+    .months-container {
+        gap: 2rem;
+        justify-content: center;
+
+        .month-container {
+            padding: 2rem;
+            min-width: 30rem;
+            background-color: #fffa;
+            border-radius: 1rem;
+            box-shadow: 1.6rem 1.6rem 4rem #0004;
+        }
+    }
+
+    table.month {
+        th.month-title {
+            font-size: 3rem;
+            font-family: Butler, sans-serif;
+            color: #111;
+            text-shadow: 1px 1px (var(--secColor)), -1px 1px (var(--secColor)), 1px -1px (var(--secColor)), -1px -1px (var(--secColor));
+            font-weight: 900;
+            letter-spacing: 0.2rem;
+        }
+
+        td:first-child,
+        td:last-child,
+        thead tr:nth-child(2) th:first-child,
+        thead tr:nth-child(2) th:last-child {
+            color: var(--secColor);
+        }
+
+        th.day-header {
+            font-size: 2rem;
+            color: #111;
+            font-weight: 700;
+        }
+
+        tr {
+            td {
+                font-size: 2rem;
+                font-weight: 400;
+                color: #111;
+
+                &.day {
+                    .day-content {
+                        padding: 0.6rem 0.8rem;
+
+                        &:hover {
+                            color: #fffaff;
+                            background-color: var(--secColor);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 55%;
+    }
+
+    body {
+        background: url("../images/Dec29/pexels-valeria-boltneva-1805164.jpg") center no-repeat;
+        background-size: cover;
+    }
+
+    .calendar {
+        padding: 2rem;
+
+        .months-container {
+            .month-container {
+                min-width: 32rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 540px) {
+    html {
+        font-size: 45%;
+    }
+}
