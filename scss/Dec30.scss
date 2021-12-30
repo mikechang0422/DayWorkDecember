@@ -1,0 +1,83 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
+@import url("../font/Butler_Webfont/stylesheet.css");
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    font-family: Lato, Butler, "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    background-color: #ececec;
+}
+
+.middle {
+    width: 100%;
+    box-shadow: 0 0 2rem #0003, 0 0 4rem #0003, 0 0 8rem #0003;
+}
+
+.counting_sec {
+    padding: 4rem 0;
+    width: 100%;
+    background: linear-gradient(90deg, #3c6382, #82ccdd);
+}
+
+.inner_width {
+    display: flex;
+    margin: auto;
+    max-width: 120rem;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.col {
+    padding: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    flex: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+
+    i {
+        margin: 2rem 0;
+        font-size: 6rem;
+        color: #333;
+    }
+
+    .num {
+        margin-bottom: 2rem;
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 540px) {
+    html {
+        font-size: 45%;
+    }
+
+    .inner_width {
+        flex-direction: column;
+    }
+}
